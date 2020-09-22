@@ -55,7 +55,9 @@ def remove_student_from_classroom(student: Dict, classroom: Dict):
         student: The student to be removed
         classroom: the class from which the student will be removed.
     """
-    pass
+    classroom["student_list"].remove(student)
+    return None
+
 
 
 def edit_student(student: Dict, **kwargs: Dict):
