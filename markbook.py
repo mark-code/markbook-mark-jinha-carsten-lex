@@ -43,7 +43,9 @@ def add_student_to_classroom(student: Dict, classroom: Dict):
         student: Student dict
         classroom: The classroom to add the student to
     """
-    return classroom["student_list"].append(student)
+    classroom["student_list"].append(student)
+    return None
+    
 
 
 def remove_student_from_classroom(student: Dict, classroom: Dict):
