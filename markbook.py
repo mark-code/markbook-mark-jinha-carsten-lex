@@ -3,6 +3,7 @@ Markbook Application
 Group members: 
 """
 from typing import Dict
+import json
 
 
 def create_assignment(name: str, due: str, points: int) -> Dict:
@@ -65,4 +66,10 @@ def edit_student(student: Dict, **kwargs: Dict):
             data that needs to be changed. Can come in the form
             of a dictionary.
     """
+    pass
+
+def store_student_information(classroom: dict):
+    with open("class_data.json", "w") as write_file:
+        json.dump(classroom, write_file)
+    return None
     pass
