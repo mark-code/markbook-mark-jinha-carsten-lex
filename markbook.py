@@ -1,4 +1,5 @@
 from typing import Dict, List
+import json
 """
 Markbook Application
 Group members: 
@@ -99,3 +100,9 @@ def print_report(classroom: Dict):
     print("Class: " + str(classroom["course_code"]))
     print("Class Average: " + str(class_average(classroom)))
     return None
+
+def store_student_information(classroom: dict):
+    with open("class_data.json", "w") as write_file:
+        json.dump(classroom, write_file)
+    return None
+    pass
